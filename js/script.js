@@ -13,4 +13,14 @@ jQuery(document).ready(function() {
         $('.submenu').stop().slideUp(400);
         $('#menu_bg').stop().slideUp(500);
     });
+
+    $('.slide a:gt(0)').hide();
+    setInterval(function(){
+        $('.slide a:first-child')
+            .fadeOut()
+            .next('a')
+            .fadeIn()
+            .end()
+            .appendTo('.slide');
+        },5000);
 });
