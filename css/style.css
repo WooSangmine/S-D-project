@@ -1,0 +1,118 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    font-family: "맑은 고딕";
+    color: #333333;
+}
+
+html, body {
+    min-width: 1200px;
+    background-color: #ffffff;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+header {
+    width: 100%;
+    height: 200px;    
+}
+
+.wrap {
+    width: 100%;
+    height: 100px;
+    border-bottom:1px solid #18005a;
+    background: #dddddd;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    position: absolute;
+    width: 1200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-wrap {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    width: 1200px;
+    height: 100px;
+    z-index: 7;
+}
+
+#menu_bg {
+    width: 1200%;
+    height: 300px;
+    position: absolute;
+    display: none;
+    z-index: 7;
+    top: 100px;
+    background-color: #bbbbbb;
+}
+
+
+.navi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 7;
+}
+
+.navi > li > a{
+    display: grid;
+    width: 200px;
+    height: 80px;
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: bold;
+    z-index: 7;
+}
+
+
+.navi > li > a:hover {
+    background-color: #ffffff;
+}
+
+.submenu {
+    width: 200px;
+    height: 160px;
+    position: absolute;
+    display: none;
+    z-index: 7;
+}
+
+.submenu > li >a {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.submenu > li > a:hover {
+    background-color: #006478;
+}
+
+.imgslides {
+    width: 1200px;
+    height: 800px;
+    position: static;
+    overflow: hidden;
+    z-index: 1;
+}
