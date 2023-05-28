@@ -23,4 +23,5 @@ jQuery(document).ready(function() {
             .end()
             .appendTo('.slide');
         },5000);
+
 });
