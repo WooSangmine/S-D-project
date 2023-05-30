@@ -23,5 +23,17 @@ jQuery(document).ready(function() {
             .end()
             .appendTo('.slide');
         },5000);
+    
+    $('#menuicon').click(function(){
+        $('.hgbt').toggleClass('active');
+        if($('#menuicon').is(":checked") == true){
+            $('.hgtap').animate({
+                marginRight:0
+            },1000);};
+            if($('#menuicon').is(":checked") == false){
+                $('.hgtap').animate({
+                    marginRight:-300
+                },1000);};
+    });
 
 });
