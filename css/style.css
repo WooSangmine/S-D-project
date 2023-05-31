@@ -44,7 +44,7 @@ a {
     height: 8px;
     border-radius: 8px;
     width: 100%;
-    background: #3d4146;
+    background: #ffffff;
     top:0;
     z-index: 101;
     transition: 0.2s;
@@ -89,16 +89,32 @@ a {
 .hgtap-my {
     width: 300px;
     height: 100px;
-    background-color: #333333;
+    background-color: rgb(47, 49, 141);
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
 }
 
-.profile {
+.hgtap  li {
+    padding: 5px 0px 0px 10px;
+}
+
+.hgtap li:hover {
+    background-color: rgb(217, 47, 138);
+}
+
+.profil {
     border-radius: 50px;
-    width: 50px;
-    height: 50px;
-    background-color: #ffffff;
+    width: 90px;
+    height: 90px;
+    background-color: #dddddd;
 }
 
+.name > p{
+    color: #dddddd;
+    margin-right: 100px;
+}
 .hgtap > li {
     
     left: 20px;
@@ -122,13 +138,30 @@ header {
 }
 #search{
     margin-top: 10px;
-    width:600px;
+    width:500px;
 	height: 30px;
-    border-radius: 20px;
+    border-radius: 20px 0px 0px 20px;
     font-size: 20px;
-    outline: none;
+    border: none;
     background-color:#ffffff;
     padding-left:10px;
+}
+
+#submit {
+    margin-top: 10px;
+    width:100px;
+	height: 30px;
+    font-size: 20px;
+    border: none;
+    background-color:rgb(47, 49, 141);
+    padding-left:10px;
+    border-radius: 0px 20px 20px 0px;
+    margin-left: -10px;
+    color: #ffffff;
+}
+
+#submit:active {
+    background-color:rgb(217, 47, 138);
 }
 
 .logo {
@@ -223,9 +256,18 @@ header {
 }
 
 .slide {
+    margin-top: 400px;
     width: 1200px;
     height: 600px;
     position: absolute;
     overflow: hidden;
+    z-index: 2;
+}
+
+.cardbox {
+    margin-top: 500px;
+    width: 1200px;
+    background-color: #18005a;
+    height: 200px;
     z-index: 2;
 }
