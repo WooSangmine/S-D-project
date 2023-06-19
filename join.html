@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>악쓰는하마 회원가입</title>
+    <link rel="stylesheet" href="css/join.css">
+    <script src="js/jquery-1.12.3.js"></script>
+    <script src="js/join.js"></script>
+</head>
+<body>
+    <div id="loginDisplay">
+        <img src="img/logo.png" width="300px" height="100px">
+        <div class="clear"></div>
+        <form name="form2"  method="get" action="login.html" 
+        onsubmit="return chkSubmit();" > 
+            Name(*필수)<br>
+            <input type="text" required name="Name">  
+            <br><br>
+          
+            ID(*필수)<br>
+            <input type="text" required name="ID">
+            <br><br>
+            Password(*필수)<br>
+            <input type="password" name="PW1">
+            <br><br>
+            Password Again(*필수)<br>
+            <input type="password" name="PW2">
+            <br><br>
+            Age(*필수) [숫자만 입력]<br>
+            <input type="number" name="Age">
+            <br><br>
+            <input type="submit" value="회원가입">
+
+          
+       
+            <div id="myModal" class="modal">
+
+               
+                <div class="modal-content" id="modal-c">
+                  <span id="closeGo2">&times;</span>
+                  
+                  <img src="img/logo.png" width="300px" height="100px"><br>
+                 <p> <오류> <br>잘못된 입력입니다. <br> 오류 위치로 포커스가 이동합니다. </p>
+                </div>
+              
+            </div>
+    </div>
+    <footer class="bottom">
+        <footer class="bottom">
+            <div id="footer_1"> ㈜악쓰는하마 경기도 성남시 중원구 | 공동대표이사: 이동화 | 사업자등록번호: 123-456-8901 | 통신판매업신고번호: 제 2023-1234-37378-272 | 사업자정보확인           </div>
+           
+            <div id="footer_2"> 문의전화: 1555 - 5555 ( 평일: 09:00 ~ 18:00) | 공동대표이사: 이동화 | 사업자등록번호: 123-456-8901  이메일: orientfun@naver.com  | 인증 : ㈜악쓰는하마        </div>
+        </footer>
+</body>
+</html>

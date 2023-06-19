@@ -9,15 +9,35 @@
 </head>
 <body>
     <div class="hg">
-        <a href="#" class="hgbt">aa</a>
+        <input type="checkbox" id="menuicon">
+        <label for="menuicon">
+        <a href="#" class="hgbt">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        </label>
         <ul class="hgtap">
-            <li><a href="#" >내정보</a></li>
-            <li><a href="#" >마이뮤직</a></li>
-            <li><a href="#" >고객센터</a></li>
+            <div class="hgtap-my">
+                <div class="profil"></div>
+                <div class="name"><p>비회원님</p></div>
+            </div>
+            <ul>
+                <li><a href="#" >내정보</a></li>
+                <li><a href="#" >마이뮤직</a></li>
+                <li><a href="#" >오늘의추천</a></li>
+                <li><a href="#" >고객센터</a></li> 
+            </ul>
+            <li><a href="login.html">로그인/회원가입</a></li>
         </ul>
     </div>
     <header>
         <div class="wrap">
+            <div class="search-wrap">
+                <input type="text" id="search" placeholder="검색">
+                <input type="submit" id="submit" value="검색">
+            </div>
             <div class="logo">
                 <img src="img/logo.png" alt="로고">
             </div>
@@ -27,46 +47,46 @@
             <nav class="menu">
                 <ul class="navi">
                     <li>
-                        <a href="#">인기차트</a>
-                    </li>
-                    <li>
                         <a href="#">신곡안내</a>
                         <ul class="submenu">
-                            <li class="li"><a href="#">국내 신곡</a></li>
-                            <li class="li"><a href="#">해외 신곡</a></li>
+                            <li class="li"><a href="#">한국 신곡</a></li>
+                            <li class="li"><a href="#">유럽 신곡</a></li>
+                            <li class="li"><a href="#">POP 신곡</a></li>
+                            <li class="li"><a href="#">아시아 신곡</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#">장르</a>
                         <ul class="submenu">
                             <li class="li"><a href="#">POP</a></li>
-                            <li class="li"><a href="#">R&B</a></li>
-                            <li class="li"><a href="#">HIPHOP</a></li>
-                            <li class="li"><a href="#">TROT</a></li>
+                            <li class="li"><a href="#">K-POP</a></li>
+                            <li class="li"><a href="#">트로트</a></li>
+                            <li class="li"><a href="#">발라드</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">마이뮤직</a>
+                        <a href="#">인기차트</a>
                         <ul class="submenu">
-                            <li class="li"><a href="#">카드정보</a></li>
-                            <li class="li"><a href="#">카드신청</a></li>
-                            <li class="li"><a href="#">이용내역조회</a></li>
+                            <li class="li"><a href="#">남성 인기차트</a></li>
+                            <li class="li"><a href="#">여성 인기차트</a></li>
+                            <li class="li"><a href="#">청소년 인기차트</a></li>
+                            <li class="li"><a href="#">노인 인기차트</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">아티스트</a>
+                        <a href="#">코인충전</a>
                         <ul class="submenu">
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">오늘의 추천</a>
-                        <ul class="submenu">
+                            <li class="li"><a href="#">1회이용권</a></li>
+                            <li class="li"><a href="#">자유이용권</a></li>
+                            <li class="li"><a href="#">월정액</a></li>
+                            <li class="li"><a href="#">뮤직코인</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
         </div>
-    </header>
+    </header> 
+    <!-- header 종료 -->
     <div class="imgslides">
         <div class="slide">
             <a href="#">
@@ -75,11 +95,65 @@
             <a href="#">
                 <img src="img/slide2.png" alt="slide2">
             </a>
+            <a href="#">
+                <img src="img/slide3.png" alt="slide3">
+            </a>
         </div>
     </div>
-    <div class="content">
+    <!-- 슬라이드 종료 -->
 
+    <div class="poto">
+        <section class="artist">
+            <div class="banner">
+                <ul>
+                    <li><img src="https://i.namu.wiki/i/FCp-tzxRkWeMNu9u8DcYtafrdIiV70DZdAyFl1vdi6a3b2xvVeHzobLv9q6DZviijnJc2CQN6_wIhNbVsXuMV9LE3KEYjz8LpopYYmp4rhs3AjsPIX8GlG2-lJeS7_R2tgYo28NjmjaFX5FLMuKtlg.webp" width="175px" height="150px"></li>
+                    <li><img src="https://i.namu.wiki/i/h6fwymmapsT5CGtjJjn3wdlxJp_TlAaH-Yi4QD_p1nhjWq_iswPiwPZ553SJ_RrdoTlbcPdUUUMX98b7oUJiiwUqfUeKCqb6LB7575ODn8rF-DAY4JYbEo8moBRrdiOEs9s1yRPrY-2EU6Zi_FITfg.webp" width="175px" height="150px"></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="artist">
+            <div class="banner">
+                <ul>
+                    <li><img src="https://i.namu.wiki/i/Ju5i0irPwZpXQuymrCLpmu21CbmCQ_8XB5x8gh6dMhWKWLbyrB3RmoHIfq0q629PXfnu2I551SqqrkREDWpUgHNc1ajv2jCdltbIQvWrII-wwBLy9ShZzp55ncMBn7s-tQHUfAr3JgkJ5qfPXfwSMQ.webp" width="175px" height="150px"></li>
+                    <li><img src="https://i.namu.wiki/i/NLXNtqFCIqnGxtDzEYZn-L9sqH-aiW3feYfldJ1lcoNbX6cyJz8_Dh9FvyYX5jnPBuYB8UXhmw4tGKKA7I3tPeyla6Dflg2URO_vER3zMnC5-KuwvNUOwluTajVMACY4uSzv87KbwV3tKayTiSg0oQ.webp" width="175px" height="150px"></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="artist">
+            <div class="banner">
+                <ul>
+                    <li><img src="https://i.namu.wiki/i/C5PyOqwAaA8iwzoCo5svhqf8NiQltkjkihsZN6xqTEiUZhsZBNNujUhKtu4od6VlacddFuN_lnLNMDivv_5l7pRvhaSGJnHEyqEo6eFZ1eKQNpaPoCGuizmhz1gs3D4KRaNupuUQpnhhhSg_Il8iPQ.webp" width="175px" height="150px"></li>
+                    <li><img src="https://i.namu.wiki/i/6PRLR88GNFcC5tzdJ4sIoJ92frdYDtmFiAyaGUIe1du4DEdqv9cNpMxlAufFyR33j3Wk0H3hHvddriKKsH1yHoeaPMHMw9GkMNqCs5bNCdW7VmOC_OQys6C2Blr95tMTIEJBAaQQlJyrtDdO1xpvyw.webp" width="175px" height="150px"></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="artist">
+            <div class="banner">
+                <ul>
+                    <li><img src="https://i.namu.wiki/i/wxcugIG9dNyihSCOnb8JZWJ_5WLT2yW14e_-vNqh0E6dtzy-IDksoprDeGR69H1rZwOBN4130s61Zsxqnw0ptFBaHTk_GyilURVgC4Je4kuURNkmcKjsURTrEwCUBz8JOaUcpoVLCuL-T_ClOWIMaA.webp" width="175px" height="150px"></li>
+                    <li><img src="https://i.namu.wiki/i/loq9SEUSlDu92X46h5zuVJKQ0SnpfIOydx_nATIXlHA8OH9Dry3c78sbHGidg2sqE7TUksJ6IEE1Q_C2D5UqS3LfGyQIZUkOT11g0ywcNGCuv9augEJuHifTPEmBGjtN9xomtAKWtFP9vTulGbSUJA.webp" width="175px" height="150px"></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="artist">
+            <div class="banner">
+                <ul>
+                    <li><img src="https://i.namu.wiki/i/CMIZZMda7K9vP5ToJWYzk5da0xZpikVtZOfC78XGIJh9r0GHH8ZPw_-v_3A9KAL7bR44PgUiUnGmNboOgOGRw3Kn2xyEUt0_qWXXb1ywbW7hz-835C6IIRmYSlth244kWzxvoxYor9dPkuCz3JPV9A.webp" width="175px" height="150px"></li>
+                    <li><img src="https://i.namu.wiki/i/zcjg4lqRy7ZtYL6ZvpaBd6_OQif3yZRZK5eGju4MOQNmMGy1W5plldt4leEAMI0qYBUJ5ES05ER-s6FYnZM9J6t8vN94lJlteg3yp9NukyZGwmyAWU9MmSVlc8u739K05DRz8nHQxzGAAJ37QNyS5w.webp" width="175px" height="150px"></li>
+                </ul>
+            </div>
+        </section>
     </div>
-    <footer></footer>
-</body>
+
+
+    <footer class="bottom">
+        <div id="footer_1"> ㈜악쓰는하마 경기도 성남시 중원구 | 공동대표이사: 이동화 | 사업자등록번호: 123-456-8901 | 통신판매업신고번호: 제 2023-1234-37378-272 | 사업자정보확인           </div>
+       
+        <div id="footer_2"> 문의전화: 1555 - 5555 ( 평일: 09:00 ~ 18:00) | 공동대표이사: 이동화 | 사업자등록번호: 123-456-8901  이메일: orientfun@naver.com  | 인증 : ㈜악쓰는하마        </div>
+    </footer>
+    </body>
 </html>

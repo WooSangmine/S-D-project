@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 * {
     margin: 0 auto;
     padding: 0;
@@ -18,32 +20,114 @@ a {
     display: block;
 }
 
+#menuicon {
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 25px;
+    top: 23px;
+    z-index: 101;
+}
+
+
 .hgbt {
     display: block;
     width: 50px;
     height: 50px;
-    background-color: #333333;
     position: fixed;
     right: 25px;
     top: 25px;
     z-index: 100;
+    transition: .3s ease-in-out;
 }
 
-.hgbt:focus ~ .hgtap {
-    display: block;
-}
-
-.hgtap  {
-    display: none;
-    width: 200px;
-    height: 100%;
-    background-color: #dddddd;
-    position: fixed;
+.hgbt span {
+    position: absolute;
+    height: 8px;
+    border-radius: 8px;
+    width: 100%;
+    background:rgb(0, 1, 48);
+    top:0;
     z-index: 101;
-    right: 0;
+    transition: 0.2s;
+}
+
+.hgbt span:nth-child(1) {
     top: 0;
 }
 
+.hgbt span:nth-child(2), .hgbt span:nth-child(3) {
+    top: 13px;
+}
+
+.hgbt span:nth-child(4) {
+    top: 26px;
+}
+
+
+.hgbt.active span:nth-child(1),.hgbt.active span:nth-child(4) {
+    opacity: 0;
+}
+
+.hgbt.active span:nth-child(2) {
+    transform: rotate(45deg);
+    background-color: #ffffff;
+}
+
+.hgbt.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    background-color: #ffffff;
+}
+
+.hgtap  {
+    width: 300px;
+    height: 100%;
+    background-color: #dddddd;
+    position: fixed;
+    z-index: 99;
+    right: 0px;
+    top: 0;
+    margin-right: -300px;
+}
+
+.hgtap-my {
+    width: 300px;
+    height: 100px;
+    background-color: rgb(0, 1, 48);
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+
+.hgtap  li {
+    padding: 5px 0px 0px 10px;
+}
+
+.hgtap li:hover {
+    background-color: rgb(32, 32, 78);
+}
+
+.hgtap li a:hover {
+    color: #ffffff;
+}
+.profil {
+    border-radius: 50px;
+    width: 90px;
+    height: 90px;
+    background-color: #ffffff;
+}
+
+div > .name {
+    position: relative;
+    background-color: rgb(0, 1, 48);
+}
+
+.name > p{
+    color: #ffffff;
+    margin-right: 100px;
+}
 .hgtap > li {
     
     left: 20px;
@@ -57,22 +141,50 @@ header {
 
 .wrap {
     width: 100%;
-    height: 100px;
-    border-bottom:1px solid #18005a;
-    background: #dddddd;
+    height: 150px;
+    background: #ffffff;
     display: flex;
     justify-content: center;
     position: relative;
     z-index: 10;
 }
+#search{
+    margin-top: 10px;
+    width:500px;
+	height: 30px;
+    border-radius: 20px 0px 0px 20px;
+    font-size: 20px;
+    border: none;
+    background-color:#dddddd;
+    padding-left:10px;
+}
+
+#submit {
+    margin-top: 10px;
+    width:100px;
+	height: 30px;
+    font-size: 20px;
+    border: none;
+    background-color:rgb(0, 1, 48);
+    padding-left:10px;
+    border-radius: 0px 20px 20px 0px;
+    margin-left: -10px;
+    color: #ffffff;
+}
+
+#submit:active {
+    background-color:rgb(217, 47, 138);
+}
 
 .logo {
+    margin-top: 50px;
     position: absolute;
     width: 1200px;
     height: 100px;
     display: flex;
     justify-content: center;
 }
+
 
 .menu-wrap {
     width: 100%;
@@ -86,7 +198,7 @@ header {
 
 #menu_bg {
     width: 1200%;
-    height: 200px;
+    height: 260px;
     position: absolute;
     display: none;
     z-index: 3;
@@ -111,23 +223,25 @@ header {
 
 .navi > li > a{
     display: grid;
-    width: 200px;
+    width: 300px;
     height: 50px;
     text-align: center;
     align-items: center;
     font-size: 20px;
     font-family: bold;
     z-index: 4;
-    color: #ffffff;
+    color: #000000;
+    background-color: #dddddd;
 }
 
 
 .navi > li > a:hover {
-    background-color: rgb(217, 47, 138);
+    background-color: rgb(0, 1, 48);
+    color: white;
 }
 
 .submenu {
-    width: 200px;
+    width: 300px;
     height: 160px;
     position: absolute;
     display: none;
@@ -135,17 +249,18 @@ header {
 }
 
 .submenu > li >a {
-    width: 200px;
+    width: 300px;
     height: 40px;
     line-height: 40px;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
-    color: #ffffff;
+    color: #000000;
 }
 
 .submenu > li > a:hover {
-    background-color: rgb(47, 49, 141);
+    background-color: rgb(32, 32, 78);
+    color: #ffffff;
 }
 
 .imgslides {
@@ -156,9 +271,62 @@ header {
 }
 
 .slide {
+    margin-top: 500px;
     width: 1200px;
     height: 600px;
     position: absolute;
     overflow: hidden;
     z-index: 2;
 }
+
+section.artist {
+    position: relative;
+    color: #ffffff;
+    background-color: rgb(0, 1, 48);
+    margin: 0px 0px 2px;
+    padding: 0px 0px 10px;
+    top: 550px;
+}
+
+section {
+    width: 50%;
+    height: auto;
+    float: left;
+    border: 1px solid gray;
+}
+
+.artist {
+    width: auto;
+    height: auto;
+    border: 0;
+}
+
+.banner {position: relative;  overflow: hidden; width: 175px; height: 150px; margin: 25px; margin-left: 40px; }
+.banner ul {position: absolute; margin: 0px; padding:0; list-style: none; }
+.banner ul li {float: left; margin:0; padding:0;}
+.banner ul li img  { border-radius: 50%;}
+
+.poto {
+    position: relative;
+    width: 1200px;
+}
+
+ footer {
+    position: relative;
+    top: 600px;
+    left: 300px;
+ }
+ 
+ #footer_1 , #footer_2{
+    float: left;
+    margin: 10px 0 0 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    word-spacing:5px;  /* 자간 간격 */
+    color:gray ;
+    cursor: auto;
+ }
+ 
+
+
+
