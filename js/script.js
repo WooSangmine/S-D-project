@@ -8,7 +8,7 @@ jQuery(document).ready(function() {
     });
     $('#menu_bg').mouseover(function() {
         $('.submenu').stop().slideDown(500);
-        $('#menu_bg').stop().slideDown(400);
+        $('#menu_bg').stop().slideDown(400);   
     }).mouseout(function() {
         $('.submenu').stop().slideUp(400);
         $('#menu_bg').stop().slideUp(500);
